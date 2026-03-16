@@ -8,7 +8,9 @@ const PROJECTS = [
     title: 'Dimov Tax',
     description: 'Led marketing and IT operations; rebuilt email strategy and cross-functional process optimization that eliminated six figures in waste.',
     tags: ['Email Marketing', 'Salesforce', 'Marketing Ops', 'Video Production', 'Social Media Marketing'],
-    featured: true,
+    roles: ['Led Strategy', 'Owned Execution', 'Built Email Systems', 'Managed Reporting', 'Trained 280 Staff', 'Salesforce Implementation'],
+    metric: '↑ 40% revenue growth YoY from email alone',
+    featured: false,
     logoSrc: '/images/Logos/Dimov-Tax Logo.jpeg',
     videoSrc: null,
     gallery: [
@@ -27,6 +29,8 @@ const PROJECTS = [
     title: 'Yaguarete Media',
     description: 'Creative pipeline end-to-end for a content studio — from briefs and visual direction to video, design, and delivery. AI-augmented brand content systems.',
     tags: ['Video Production', 'Brand Strategy', 'Creative Direction'],
+    roles: ['Led Creative Pipeline', 'Managed Production', 'Built AI Workflows', 'Video Editing', 'Brand Strategy'],
+    metric: '120+ content pieces/month · $5M+ revenue impact',
     featured: false,
     logoSrc: '/images/Logos/Yaguarete logo 2.png',
     cardImageBg: '#000000',
@@ -49,6 +53,8 @@ const PROJECTS = [
     title: 'TON Church',
     description: 'Community growth strategy, motion design, and marketing for a Telegram-native Web3 project. 3M+ active users in 5 months.',
     tags: ['Community Management', 'Motion Design', 'Web3'],
+    roles: ['Owned Marketing Strategy', 'Led Community Growth', 'Produced All Content', 'Motion Design'],
+    metric: '3,000,000 users acquired in 5 months',
     featured: false,
     logoSrc: '/images/Logos/TON CHURCH logo.png',
     videoSrc: null,
@@ -68,6 +74,8 @@ const PROJECTS = [
     title: 'UTXORD',
     description: 'Animated NFT collection in After Effects for social content; drove visibility and engagement across Twitter and Telegram.',
     tags: ['Motion Design', 'NFT', 'Social Content'],
+    roles: ['Content Production', 'Social Media Marketing', 'NFT Animation', 'Motion Design'],
+    metric: '381K+ impressions on single Twitter post',
     featured: false,
     logoSrc: '/images/Logos/UTXORD LOGO.jpg',
     videoSrc: null,
@@ -107,6 +115,8 @@ export default function Work({ registerReveal }) {
               title={project.title}
               description={project.description}
               tags={project.tags}
+              roles={project.roles}
+              metric={project.metric}
               featured={project.featured}
               logoSrc={project.logoSrc}
               videoSrc={project.videoSrc}
@@ -117,6 +127,19 @@ export default function Work({ registerReveal }) {
             />
           ))}
         </div>
+        <p className="mt-12 text-center">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault()
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="font-body hover:opacity-90 transition-opacity"
+            style={{ color: '#4A9EFF' }}
+          >
+            Interested in working together? → Get in touch
+          </a>
+        </p>
       </div>
     </section>
   )

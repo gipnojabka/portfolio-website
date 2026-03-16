@@ -18,14 +18,14 @@ export default function About({ registerReveal }) {
   ]
 
   return (
-    <section ref={sectionRef} className="pt-20 pb-24 sm:pb-32 px-6 sm:px-10 lg:px-20 border-t border-border">
+    <section ref={sectionRef} id="about" className="pt-20 pb-24 sm:pb-32 px-6 sm:px-10 lg:px-20 border-t border-border">
       <div className="max-w-4xl mx-auto">
         <span className="section-label">About</span>
         <p
           ref={textRef}
           className="mt-4 text-text-primary font-body max-w-2xl text-[24px] leading-relaxed"
         >
-          I build content systems that generate revenue. From brand identity to AI-augmented production pipelines — I turn creative ideas into measurable business outcomes.
+          I don't run campaigns — I build the infrastructure behind them. Email systems that generate 40% YoY revenue growth. Content pipelines producing 120+ pieces a month. Communities of 3 million users built in 5 months. I work at the intersection of strategy, creative, and operations. Give me a goal and I'll build the system that hits it.
         </p>
         <div
           ref={statsRef}
@@ -60,6 +60,19 @@ export default function About({ registerReveal }) {
             </div>
           ))}
         </div>
+        <p className="mt-12 text-center">
+          <a
+            href="#contact"
+            onClick={(e) => {
+              e.preventDefault()
+              document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })
+            }}
+            className="font-body hover:opacity-90 transition-opacity"
+            style={{ color: '#4A9EFF' }}
+          >
+            Interested in working together? → Get in touch
+          </a>
+        </p>
       </div>
     </section>
   )

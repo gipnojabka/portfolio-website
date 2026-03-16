@@ -58,10 +58,12 @@ If your media already lives in a root-level `images/` folder and you don’t wan
 
 ---
 
-## Deploy (e.g. GitHub Pages)
+## Deploy (e.g. Vercel, GitHub Pages)
 
-1. Build: `npm run build`. Output is in `dist/`.
-2. Deploy the contents of `dist/` (e.g. set GitHub Pages to use the `dist` folder or push `dist` to a `gh-pages` branch). Ensure `dist/images/` contains your media (either copy `public/images/` into `dist` before deploy or use a build step that includes it; Vite already copies `public/` into `dist/`).
+All media is referenced from **`/images/`** (Vite serves `public/` at the site root). There are no absolute filesystem paths in the code.
+
+1. **Vercel:** Commit the entire `public/images/` folder (including subfolders like `Logos/` and `UTXORD Twitter.png/`) so the build includes your media. Vite copies `public/` into `dist/`; deployed URLs like `/images/Me.png` and `/images/UTXORD%20Twitter.png/utxord10.png` will work.
+2. **Generic:** Run `npm run build`; deploy the contents of `dist/`. Ensure `dist/images/` contains your media (Vite already copies `public/` into `dist/`).
 
 ---
 

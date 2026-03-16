@@ -1,8 +1,12 @@
 import { useRef, useCallback, useEffect } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Nav from './components/Nav'
 import Hero from './components/Hero'
+import Services from './components/Services'
+import WhoIWorkBestWith from './components/WhoIWorkBestWith'
 import About from './components/About'
+import MetricsStrip from './components/MetricsStrip'
 import Work from './components/Work'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
@@ -57,10 +61,14 @@ export default function App() {
   return (
     <>
       <div className="grain-overlay" aria-hidden="true" />
+      <Nav />
       <CursorFollower />
       <main className="min-h-screen">
         <Hero />
+        <Services registerReveal={registerReveal} />
+        <WhoIWorkBestWith registerReveal={registerReveal} />
         <About registerReveal={registerReveal} />
+        <MetricsStrip />
         <Work registerReveal={registerReveal} />
         <Skills registerReveal={registerReveal} />
         <Contact registerReveal={registerReveal} />

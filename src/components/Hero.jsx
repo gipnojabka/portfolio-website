@@ -29,13 +29,13 @@ export default function Hero() {
   }, [])
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center px-6 sm:px-10 lg:px-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex flex-col justify-start lg:justify-center px-6 sm:px-10 lg:px-20 overflow-hidden">
       <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         {/* Left column: text */}
-        <div className="max-w-xl pt-[120px]">
+        <div className="max-w-xl pt-[60px] md:pt-[80px]">
           <h1
             ref={titleRef}
-            className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-text-primary text-left"
+            className="font-display font-bold text-[13vw] md:text-6xl lg:text-7xl xl:text-8xl tracking-tight text-text-primary text-left"
           >
             Theodore Lapin
           </h1>
@@ -43,7 +43,7 @@ export default function Hero() {
             ref={subtitleRef}
             className="mt-4 text-[28px] font-normal text-text-primary font-body max-w-xl text-left"
           >
-            Marketing Strategist
+            I build marketing systems for startups — from zero to measurable growth.
           </p>
           <div ref={ctaRef} className="mt-10 flex flex-wrap gap-4">
             <a

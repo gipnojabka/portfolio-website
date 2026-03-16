@@ -20,8 +20,13 @@ export default function Contact({ registerReveal }) {
         >
           Let's Work Together
         </h2>
-        <p className="mt-6 text-text-muted font-body text-body-lg">
-          Say hello. I'm always open to a conversation about your next project.
+        <div className="mt-6 font-body text-center" style={{ fontSize: '18px', color: '#888', lineHeight: 2 }}>
+          <p className="mb-0">Need a growth system that actually converts?</p>
+          <p className="mb-0">Looking for strategy, content, or email infrastructure?</p>
+          <p className="mb-0">Have a project that needs clearer execution and measurable results?</p>
+        </div>
+        <p className="font-body text-center" style={{ fontSize: '20px', color: '#F0F0F0', fontWeight: 600, marginTop: '24px' }}>
+          If yes — I want to hear about it.
         </p>
         <a
           href="mailto:fedya.lapin@gmail.com"

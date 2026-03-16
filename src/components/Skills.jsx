@@ -26,7 +26,7 @@ export default function Skills({ registerReveal }) {
   ]
 
   return (
-    <section ref={sectionRef} className="py-24 sm:py-32 px-6 sm:px-10 lg:px-20 border-t border-border">
+    <section ref={sectionRef} id="skills" className="py-24 sm:py-32 px-6 sm:px-10 lg:px-20 border-t border-border">
       <div className="max-w-5xl mx-auto">
         <span className="section-label">Skills & Stack</span>
         <h2 className="mt-4 font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-text-primary">
