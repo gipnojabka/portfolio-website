@@ -155,11 +155,10 @@ export default function ProjectCard({
               </div>
             ) : isTonChurch ? (
               <div
-                className="w-full min-h-0 flex-1 flex flex-col"
+                className="w-full min-h-0 flex-1 flex flex-col overflow-y-auto overflow-x-hidden"
                 style={{
-                  overflowY: 'scroll',
-                  overflowX: 'hidden',
                   height: '100%',
+                  WebkitOverflowScrolling: 'touch',
                 }}
               >
                 {roles.length > 0 && (
@@ -181,21 +180,12 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className="w-full flex-1 min-h-0"
-                  style={{
-                    columnCount: 3,
-                    columnGap: '12px',
-                  }}
+                  className="w-full flex-1 min-h-0 columns-2 md:columns-3 gap-2 md:gap-3 pb-20"
                 >
                   {mediaItems.map((item) => (
                     <div
                       key={item.src}
-                      className="break-inside-avoid"
-                      style={{
-                        display: 'inline-block',
-                        width: '100%',
-                        marginBottom: '12px',
-                      }}
+                      className="break-inside-avoid inline-block w-full mb-2 md:mb-3"
                     >
                     {item.type === 'video' ? (
                       <button
@@ -206,7 +196,7 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-contain align-bottom"
+                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
                           autoPlay
                           muted
                           loop
@@ -223,7 +213,7 @@ export default function ProjectCard({
                         <img
                           src={item.src}
                           alt=""
-                          className="w-full h-auto block rounded-lg object-contain align-bottom"
+                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
                         />
                       </button>
                     )}
@@ -232,7 +222,7 @@ export default function ProjectCard({
                 </div>
               </div>
             ) : (
-              <div className="w-full flex flex-col min-h-0 flex-1">
+              <div className="w-full flex flex-col min-h-0 flex-1 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
                 {roles.length > 0 && (
                   <div className="flex-shrink-0 mb-4">
                     <div className="uppercase tracking-wider font-display font-semibold mb-2" style={{ color: '#666', fontSize: '11px' }}>
@@ -252,18 +242,12 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className="w-full columns-3 flex-1 min-h-0"
-                  style={{ columnGap: '12px' }}
+                  className="w-full columns-2 md:columns-3 gap-2 md:gap-3 flex-1 min-h-0 pb-20"
                 >
                 {mediaItems.map((item) => (
                   <div
                     key={item.src}
-                    className="break-inside-avoid w-full"
-                    style={{
-                      display: 'inline-block',
-                      width: '100%',
-                      marginBottom: '12px',
-                    }}
+                    className="break-inside-avoid w-full inline-block mb-2 md:mb-3"
                   >
                     {item.type === 'video' ? (
                       <button
@@ -274,7 +258,7 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-contain align-bottom"
+                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
                           autoPlay
                           muted
                           loop
@@ -291,7 +275,7 @@ export default function ProjectCard({
                         <img
                           src={item.src}
                           alt=""
-                          className="w-full h-auto block rounded-lg object-contain align-bottom"
+                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
                         />
                       </button>
                     )}

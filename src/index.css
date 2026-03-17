@@ -31,3 +31,13 @@
 .section-label {
   @apply uppercase tracking-[0.2em] text-text-muted text-xs font-display font-semibold;
 }
+
+/* Contact toast fade-in */
+@keyframes contactToastFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
