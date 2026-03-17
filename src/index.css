@@ -11,9 +11,11 @@
     font-size: 1rem;
     line-height: 1.7;
     font-weight: 300;
+    overflow-x: hidden;
   }
   #root {
     min-height: 100vh;
+    overflow-x: hidden;
   }
 }
 
@@ -68,16 +70,6 @@
   break-inside: avoid;
   -webkit-column-break-inside: avoid;
 }
-@media (max-width: 768px) {
-  .lightbox-masonry {
-    column-count: 2;
-    column-gap: 12px;
-  }
-  .lightbox-masonry-single-col-mobile {
-    column-count: 1;
-    column-gap: 12px;
-  }
-}
 
 /* All modals: preserve natural aspect ratio — no crop */
 .lightbox-masonry img {
@@ -92,5 +84,13 @@
   display: block;
   max-height: none;
   object-fit: contain;
+}
+
+/* All text and content inside modal */
+.lightbox-inner,
+.lightbox-inner * {
+  max-width: 100%;
+  box-sizing: border-box;
+  word-wrap: break-word;
 }
 
