@@ -29,13 +29,12 @@ export default function About({ registerReveal }) {
         </p>
         <div
           ref={statsRef}
-          className="mt-[60px] grid grid-cols-3 md:grid-cols-3 justify-items-start"
-          style={{ gap: '80px' }}
+          className="mt-[60px] grid grid-cols-3 md:grid-cols-3 justify-items-start gap-4 md:gap-[80px]"
         >
           {stats.map(({ value, label }) => (
             <div key={label} className="text-left">
               <div
-                className="font-display font-bold text-accent text-[48px] md:text-[80px]"
+                className="font-display font-bold text-accent text-[32px] md:text-[80px]"
                 style={{
                   display: 'inline-block',
                   lineHeight: 1,
