@@ -166,11 +166,11 @@ export default function ProjectCard({
                     <div className="uppercase tracking-wider font-display font-semibold mb-2" style={{ color: '#666', fontSize: '11px' }}>
                       My Role
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 md:gap-2" style={{ gap: '8px' }}>
                       {roles.map((role) => (
                         <span
                           key={role}
-                          className="inline-block font-semibold text-sm rounded-md py-[6px] px-[14px]"
+                          className="inline-block font-semibold rounded-md text-xs md:text-sm py-2 px-3 md:py-[6px] md:px-[14px]"
                           style={{ background: '#1a1a1a', border: '1px solid #333', color: '#F0F0F0' }}
                         >
                           {role}
@@ -180,12 +180,17 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className="w-full flex-1 min-h-0 columns-2 md:columns-3 gap-2 md:gap-3 pb-20"
+                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''}`}
                 >
                   {mediaItems.map((item) => (
                     <div
                       key={item.src}
-                      className="break-inside-avoid inline-block w-full mb-2 md:mb-3"
+                      className="masonry-item inline-block w-full align-top rounded-lg overflow-hidden mb-3"
+                      style={{
+                        display: 'inline-block',
+                        width: '100%',
+                        marginBottom: '12px',
+                      }}
                     >
                     {item.type === 'video' ? (
                       <button
@@ -196,7 +201,8 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
+                          className="w-full h-auto block rounded-lg object-cover max-h-[400px] md:max-h-[400px]"
+                          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '400px', objectFit: 'cover' }}
                           autoPlay
                           muted
                           loop
@@ -213,7 +219,8 @@ export default function ProjectCard({
                         <img
                           src={item.src}
                           alt=""
-                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
+                          className="w-full h-auto block rounded-lg"
+                          style={{ width: '100%', height: 'auto', display: 'block' }}
                         />
                       </button>
                     )}
@@ -228,11 +235,11 @@ export default function ProjectCard({
                     <div className="uppercase tracking-wider font-display font-semibold mb-2" style={{ color: '#666', fontSize: '11px' }}>
                       My Role
                     </div>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 md:gap-2" style={{ gap: '8px' }}>
                       {roles.map((role) => (
                         <span
                           key={role}
-                          className="inline-block font-semibold text-sm rounded-md py-[6px] px-[14px]"
+                          className="inline-block font-semibold rounded-md text-xs md:text-sm py-2 px-3 md:py-[6px] md:px-[14px]"
                           style={{ background: '#1a1a1a', border: '1px solid #333', color: '#F0F0F0' }}
                         >
                           {role}
@@ -242,12 +249,17 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className="w-full columns-2 md:columns-3 gap-2 md:gap-3 flex-1 min-h-0 pb-20"
+                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''}`}
                 >
                 {mediaItems.map((item) => (
                   <div
                     key={item.src}
-                    className="break-inside-avoid w-full inline-block mb-2 md:mb-3"
+                    className="masonry-item inline-block w-full align-top rounded-lg overflow-hidden mb-3"
+                    style={{
+                      display: 'inline-block',
+                      width: '100%',
+                      marginBottom: '12px',
+                    }}
                   >
                     {item.type === 'video' ? (
                       <button
@@ -258,7 +270,8 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
+                          className="w-full h-auto block rounded-lg object-cover"
+                          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '400px', objectFit: 'cover' }}
                           autoPlay
                           muted
                           loop
@@ -275,7 +288,8 @@ export default function ProjectCard({
                         <img
                           src={item.src}
                           alt=""
-                          className="w-full h-auto block rounded-lg object-contain align-bottom break-inside-avoid"
+                          className="w-full h-auto block rounded-lg"
+                          style={{ width: '100%', height: 'auto', display: 'block' }}
                         />
                       </button>
                     )}

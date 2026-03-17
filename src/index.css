@@ -32,6 +32,11 @@
   @apply uppercase tracking-[0.2em] text-text-muted text-xs font-display font-semibold;
 }
 
+/* Hero heading: ensure Syne/display font on desktop */
+#home h1 {
+  font-family: Syne, system-ui, sans-serif;
+}
+
 /* Contact toast fade-in */
 @keyframes contactToastFadeIn {
   from {
@@ -41,3 +46,37 @@
     opacity: 1;
   }
 }
+
+/* Masonry grid item - avoid break inside */
+.masonry-item {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+/* Masonry grid container: desktop 3 cols / 12px gap, mobile 2 cols / 8px gap */
+.lightbox-masonry {
+  display: block;
+  width: 100%;
+  column-count: 3;
+  column-gap: 12px;
+}
+@media (max-width: 768px) {
+  .lightbox-masonry {
+    column-count: 2;
+    column-gap: 8px;
+  }
+  .lightbox-masonry .masonry-item {
+    margin-bottom: 8px !important;
+  }
+  /* TON Church and UTXORD: single column on mobile */
+  .lightbox-masonry-single-col-mobile {
+    column-count: 1;
+    column-gap: 0;
+  }
+  .lightbox-masonry-single-col-mobile .masonry-item {
+    margin-bottom: 12px !important;
+    width: 100%;
+  }
+}
+

@@ -54,7 +54,7 @@ export default function Nav() {
               key={href}
               className={`inline-flex items-center gap-4 md:gap-6 flex-shrink-0 ${hideOnMobile ? 'hidden md:inline-flex' : ''}`}
             >
-              {showSeparator && <span className="text-[#666]" aria-hidden>·</span>}
+              {showSeparator && <span className="text-[#666] text-[8px] md:text-base" aria-hidden>·</span>}
               <a
                 href={href}
                 onClick={(e) => handleClick(e, href)}

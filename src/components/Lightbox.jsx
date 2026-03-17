@@ -30,19 +30,18 @@ export default function Lightbox({ isOpen, onClose, children, title }) {
       <button
         type="button"
         onClick={(e) => { e.stopPropagation(); onClose() }}
-        className="fixed top-4 right-4 z-[9999] flex items-center justify-center w-10 h-10 rounded-full text-white hover:text-white transition-colors flex-shrink-0"
-        style={{ background: 'rgba(0,0,0,0.8)' }}
+        className="fixed top-4 right-4 z-[9999] flex items-center justify-center w-10 h-10 rounded-full text-white hover:text-white transition-colors flex-shrink-0 border border-[#333] md:border-transparent"
+        style={{ background: 'rgba(0,0,0,0.9)' }}
         aria-label="Close"
       >
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <svg className="w-[18px] h-[18px] md:w-6 md:h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path d="M18 6L6 18M6 6l12 12" />
         </svg>
       </button>
       <div
-        className="relative flex flex-col w-screen h-screen md:w-[90vw] md:h-[85vh] overflow-y-auto overflow-x-hidden overscroll-contain md:rounded-xl"
+        className="relative flex flex-col w-screen h-screen md:w-[90vw] md:h-[85vh] overflow-y-auto overflow-x-hidden overscroll-contain md:rounded-xl p-4 pt-[60px] md:p-6 md:pt-6"
         style={{
-          background: '#141414',
-          padding: '24px',
+          background: '#0C0C0C',
           WebkitOverflowScrolling: 'touch',
         }}
         onClick={(e) => e.stopPropagation()}

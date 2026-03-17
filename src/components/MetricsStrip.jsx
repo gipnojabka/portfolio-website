@@ -52,22 +52,21 @@ export default function MetricsStrip() {
         borderColor: '#1a1a1a',
       }}
     >
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-20 flex flex-wrap justify-between gap-8 md:gap-0">
+      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-20 grid grid-cols-2 md:flex flex-wrap justify-between gap-6 md:gap-0">
         {METRICS.map((metric, i) => (
           <div
             key={metric.label}
-            className="flex-1 min-w-[140px] flex flex-col items-center text-center md:items-center md:pr-8 md:last:pr-0"
-            style={i < METRICS.length - 1 ? { borderRight: '1px solid #1a1a1a' } : {}}
+            className={`flex flex-col items-center text-center md:items-center md:flex-1 md:min-w-[140px] md:pr-8 md:last:pr-0 ${i < METRICS.length - 1 ? 'md:border-r md:border-[#1a1a1a]' : ''}`}
           >
             <div
-              className="font-display font-bold text-4xl sm:text-5xl"
-              style={{ color: '#4A9EFF', fontSize: '48px', fontWeight: 700 }}
+              className="font-display font-bold text-[36px] md:text-[48px]"
+              style={{ color: '#4A9EFF', fontWeight: 700 }}
             >
               <AnimatedNumber target={metric.value} format={metric.format} />
             </div>
             <div
-              className="mt-2 uppercase font-display font-semibold"
-              style={{ fontSize: '11px', letterSpacing: '2px', color: '#666' }}
+              className="mt-2 uppercase font-display font-semibold text-[10px] md:text-[11px]"
+              style={{ letterSpacing: '2px', color: '#666' }}
             >
               {metric.label}
             </div>

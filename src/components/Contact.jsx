@@ -39,7 +39,7 @@ export default function Contact({ registerReveal }) {
         <span className="section-label">Contact</span>
         <h2
           ref={contentRef}
-          className="mt-4 font-display font-bold text-4xl sm:text-5xl lg:text-6xl uppercase tracking-tight text-text-primary"
+          className="mt-4 font-display font-bold text-[10vw] sm:text-4xl lg:text-6xl uppercase tracking-tight text-text-primary"
         >
           Let's Work Together
         </h2>
@@ -55,7 +55,7 @@ export default function Contact({ registerReveal }) {
           type="button"
           onClick={handleCopyEmail}
           title="Click to copy"
-          className="mt-8 font-body text-xl sm:text-2xl font-medium hover:brightness-110 transition-all underline underline-offset-4 decoration-accent/60 hover:decoration-accent border-0 bg-transparent text-accent cursor-pointer"
+          className="mt-8 font-body text-xl md:text-2xl font-medium hover:brightness-110 transition-all underline underline-offset-4 decoration-accent/60 hover:decoration-accent border-0 bg-transparent text-accent cursor-pointer"
         >
           {EMAIL}
         </button>

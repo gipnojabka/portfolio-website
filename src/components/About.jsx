@@ -23,22 +23,21 @@ export default function About({ registerReveal }) {
         <span className="section-label">About</span>
         <p
           ref={textRef}
-          className="mt-4 text-text-primary font-body max-w-2xl text-[24px] leading-relaxed"
+          className="mt-4 text-text-primary font-body max-w-2xl text-lg md:text-[24px] leading-relaxed"
         >
           I don't run campaigns — I build the infrastructure behind them. Email systems that generate 40% YoY revenue growth. Content pipelines producing 120+ pieces a month. Communities of 3 million users built in 5 months. I work at the intersection of strategy, creative, and operations. Give me a goal and I'll build the system that hits it.
         </p>
         <div
           ref={statsRef}
-          className="mt-[60px] grid grid-cols-1 sm:grid-cols-3 justify-items-start"
+          className="mt-[60px] grid grid-cols-3 md:grid-cols-3 justify-items-start"
           style={{ gap: '80px' }}
         >
           {stats.map(({ value, label }) => (
             <div key={label} className="text-left">
               <div
-                className="font-display font-bold text-accent"
+                className="font-display font-bold text-accent text-[48px] md:text-[80px]"
                 style={{
                   display: 'inline-block',
-                  fontSize: '80px',
                   lineHeight: 1,
                   verticalAlign: 'baseline',
                   fontVariantNumeric: 'normal',

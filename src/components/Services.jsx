@@ -55,7 +55,7 @@ export default function Services({ registerReveal }) {
         <h2 className="mt-4 font-display font-bold text-3xl sm:text-4xl uppercase tracking-tight text-text-primary">
           What I Do
         </h2>
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
           {CARDS.map((card, i) => (
             <div
               key={card.title}
