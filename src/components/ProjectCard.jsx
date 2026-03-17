@@ -249,7 +249,7 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''}`}
+                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''} ${title === 'Yaguarete Media' ? 'lightbox-masonry-yaguarete' : ''}`}
                 >
                 {mediaItems.map((item) => (
                   <div

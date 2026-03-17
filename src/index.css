@@ -80,3 +80,10 @@
   }
 }
 
+/* Yaguarete Media: videos at natural aspect ratio, no crop */
+.lightbox-masonry-yaguarete video {
+  height: auto !important;
+  max-height: none !important;
+  object-fit: contain !important;
+}
+
