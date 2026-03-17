@@ -201,8 +201,7 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-cover max-h-[400px] md:max-h-[400px]"
-                          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '400px', objectFit: 'cover' }}
+                          className="w-full h-auto block rounded-lg"
                           autoPlay
                           muted
                           loop
@@ -220,7 +219,6 @@ export default function ProjectCard({
                           src={item.src}
                           alt=""
                           className="w-full h-auto block rounded-lg"
-                          style={{ width: '100%', height: 'auto', display: 'block' }}
                         />
                       </button>
                     )}
@@ -229,7 +227,7 @@ export default function ProjectCard({
                 </div>
               </div>
             ) : (
-              <div className="w-full flex flex-col min-h-0 flex-1 overflow-y-auto overflow-x-hidden" style={{ WebkitOverflowScrolling: 'touch' }}>
+              <div className="w-full flex flex-col min-h-0 flex-1">
                 {roles.length > 0 && (
                   <div className="flex-shrink-0 mb-4">
                     <div className="uppercase tracking-wider font-display font-semibold mb-2" style={{ color: '#666', fontSize: '11px' }}>
@@ -249,7 +247,7 @@ export default function ProjectCard({
                   </div>
                 )}
                 <div
-                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''} ${title === 'Yaguarete Media' ? 'lightbox-masonry-yaguarete' : ''}`}
+                  className={`lightbox-masonry w-full flex-1 min-h-0 pb-20 ${isTonChurch || title === 'UTXORD' ? 'lightbox-masonry-single-col-mobile' : ''}`}
                 >
                 {mediaItems.map((item) => (
                   <div
@@ -270,8 +268,7 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg object-cover"
-                          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: '400px', objectFit: 'cover' }}
+                          className="w-full h-auto block rounded-lg"
                           autoPlay
                           muted
                           loop
@@ -289,7 +286,6 @@ export default function ProjectCard({
                           src={item.src}
                           alt=""
                           className="w-full h-auto block rounded-lg"
-                          style={{ width: '100%', height: 'auto', display: 'block' }}
                         />
                       </button>
                     )}

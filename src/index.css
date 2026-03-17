@@ -54,36 +54,43 @@
   -webkit-column-break-inside: avoid;
 }
 
-/* Masonry grid container: desktop 3 cols / 12px gap, mobile 2 cols / 8px gap */
+/* Masonry grid: desktop 3 cols, mobile 2 cols (Dimov/Yaguarete) or 1 col (TON/UTXORD) */
 .lightbox-masonry {
   display: block;
   width: 100%;
   column-count: 3;
   column-gap: 12px;
 }
+.lightbox-masonry .masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 12px;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
 @media (max-width: 768px) {
   .lightbox-masonry {
     column-count: 2;
-    column-gap: 8px;
+    column-gap: 12px;
   }
-  .lightbox-masonry .masonry-item {
-    margin-bottom: 8px !important;
-  }
-  /* TON Church and UTXORD: single column on mobile */
   .lightbox-masonry-single-col-mobile {
     column-count: 1;
-    column-gap: 0;
-  }
-  .lightbox-masonry-single-col-mobile .masonry-item {
-    margin-bottom: 12px !important;
-    width: 100%;
+    column-gap: 12px;
   }
 }
 
-/* Yaguarete Media: videos at natural aspect ratio, no crop */
-.lightbox-masonry-yaguarete video {
-  height: auto !important;
-  max-height: none !important;
-  object-fit: contain !important;
+/* All modals: preserve natural aspect ratio — no crop */
+.lightbox-masonry img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+.lightbox-masonry video {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: none;
+  object-fit: contain;
 }
 
