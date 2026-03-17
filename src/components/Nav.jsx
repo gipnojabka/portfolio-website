@@ -44,24 +44,24 @@ export default function Nav() {
         backdropFilter: 'blur(12px)',
       }}
     >
-      <div className="flex items-center gap-4 md:gap-6 overflow-x-auto overflow-y-hidden w-full justify-center md:justify-center flex-1 min-w-0 py-1" style={{ WebkitOverflowScrolling: 'touch' }}>
+      <div className="flex items-center justify-center w-full py-1">
         {LINKS.map(({ href, label, hideOnMobile }, i) => {
           const id = href.slice(1)
           const isActive = activeId === id
-          const showSeparator = (hideOnMobile && i > 0) || (!hideOnMobile && LINKS.some((l, j) => j < i && !l.hideOnMobile))
+          const isFirst = i === 0
           return (
             <span
               key={href}
-              className={`inline-flex items-center gap-4 md:gap-6 flex-shrink-0 ${hideOnMobile ? 'hidden md:inline-flex' : ''}`}
+              className={`inline-flex items-center flex-shrink-0 ${hideOnMobile ? 'hidden md:inline-flex' : 'inline-flex'}`}
             >
-              {showSeparator && <span className="text-[#666] text-[8px] md:text-base" aria-hidden>·</span>}
+              {!isFirst && (
+                <span className="mx-4 md:mx-6 text-[#666] text-[8px] md:text-[10px]" aria-hidden>·</span>
+              )}
               <a
                 href={href}
                 onClick={(e) => handleClick(e, href)}
                 className="transition-colors duration-200 hover:opacity-90 text-[10px] md:text-[12px] tracking-[1px] md:tracking-[2px] uppercase no-underline"
-                style={{
-                  color: isActive ? '#4A9EFF' : '#F0F0F0',
-                }}
+                style={{ color: isActive ? '#4A9EFF' : '#F0F0F0' }}
               >
                 {label}
               </a>
