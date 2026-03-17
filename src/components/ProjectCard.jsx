@@ -201,12 +201,13 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg"
+                          className="w-full block rounded-lg"
+                          style={{ minHeight: '200px', height: 'auto' }}
                           autoPlay
                           muted
                           loop
                           playsInline
-                          preload="none"
+                          preload="metadata"
                         />
                       </button>
                     ) : (
@@ -268,12 +269,13 @@ export default function ProjectCard({
                         <video
                           ref={item.src === videoSrc ? videoRef : undefined}
                           src={item.src}
-                          className="w-full h-auto block rounded-lg"
+                          className="w-full block rounded-lg"
+                          style={{ minHeight: '200px', height: 'auto' }}
                           autoPlay
                           muted
                           loop
                           playsInline
-                          preload="none"
+                          preload="metadata"
                         />
                       </button>
                     ) : (
